@@ -28,14 +28,14 @@ import serverConfig from './config';
 mongoose.Promise = global.Promise;
 
 // MongoDB Connection
-mongoose.connect(serverConfig.mongoURL, (error) => {
-  if (error) {
-    console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
-    throw error;
-  } else {
-    console.log("MongoDB is online");
-  }
-});
+// mongoose.connect(serverConfig.mongoURL, (error) => {
+//   if (error) {
+//     console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
+//     throw error;
+//   } else {
+//     console.log("MongoDB is online");
+//   }
+// });
 
 // Apply body Parser and server public assets and routes
 app.use(compression());
