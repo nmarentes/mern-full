@@ -3,11 +3,13 @@
  */
 import 'App.css';
 import React, {Component} from 'react';
+// import 'font-awesome/css/font-awesome.css';
+
 
 export class Home extends React.Component {
   render() {
     return (
-      <div>Hello Word!</div>
+      <div>Hello, World.</div>
     );
   }
 }
