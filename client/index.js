@@ -9,6 +9,10 @@ const mountApp = document.getElementById('root');
 import {Home} from './Home';
 import {About} from './About';
 
+// console.log("My key = " + JSON.stringify(process.env));
+
+console.log("My key = " + process.env.GAPI_KEY);
+
 const routes = (
   <Router>
     <Route path="/" component={Home} />

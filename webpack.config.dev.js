@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+let gapi = JSON.stringify(process.env.GAPI_KEY);
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -82,6 +83,7 @@ module.exports = {
       'process.env': {
         CLIENT: JSON.stringify(true),
         'NODE_ENV': JSON.stringify('development'),
+        'GAPI_KEY': gapi
       }
     }),
     new webpack.LoaderOptionsPlugin({
