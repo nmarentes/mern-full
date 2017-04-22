@@ -16,7 +16,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div className={styles.wrapper}>
+      <div >
         {this.content}
       </div>
     );
