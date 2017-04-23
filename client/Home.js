@@ -3,7 +3,7 @@ import 'App.css';
 // import 'font-awesome/css/font-awesome.css';
 
 export class Home extends Component {
-  static render() {
+   render() {
     return (
       <div>
         <h1>

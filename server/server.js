@@ -23,8 +23,8 @@ if (process.env.NODE_ENV === 'development') {
 import React from 'react';
 import Helmet from 'react-helmet';
 import serverConfig from './config';
-
-
+// load
+import api from './routes/api';
 
 
 console.log("My key = " + JSON.stringify(process.env.GAPI_KEY));
@@ -92,6 +92,14 @@ const renderError = err => {
     `:<br><br><pre style="color:red">${softTab}${err.stack.replace(/\n/g, `<br>${softTab}`)}</pre>` : '';
   return renderFullPage(`Server Error${errTrace}`, {});
 };
+
+// route api calls to the api module
+// app.use('/api', (req, res) => {
+//   res.write("Hello API");
+//   res.end();
+// });
+
+app.use('/api', api);
 
 app.use((req, res, next) => {
   res.set('Content-Type', 'text/html')
