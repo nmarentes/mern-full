@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Router} from 'react-router';
 
-import styles from './App.css';
-
 export class App extends Component {
   static  propTypes = {
     history: PropTypes.object.isRequired,

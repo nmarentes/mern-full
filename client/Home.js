@@ -1,15 +1,16 @@
-/**
- * Created by troymiles on 4/22/17.
- */
-import 'App.css';
 import React, {Component} from 'react';
+import 'App.css';
 // import 'font-awesome/css/font-awesome.css';
 
-
-export class Home extends React.Component {
-  render() {
+export class Home extends Component {
+  static render() {
     return (
-      <div>Hello, World.</div>
+      <div>
+        <h1>
+          <i className="fa fa-star"></i>
+          Hello, Home.
+        </h1>
+      </div>
     );
   }
 }
