@@ -1,3 +1,4 @@
+import {ADD_TODO, TOGGLE_TODO, DELETE_TODO, TOGGLE_CASE} from './Actions';
 let nextToDoId = 0;
 
 export const addToDo = (text) => {
@@ -23,3 +24,17 @@ export const toggleToDo = (id) => {
 };
 
 
+export const deleteTodo = (id)=>{
+  return {
+    type: 'DELETE_TODO',
+    id
+  }
+};
+
+export const toggleCase = (id)=>{
+  return {
+    type: 'TOGGLE_CASE',
+    id,
+    text
+  }
+};

@@ -1,5 +1,7 @@
 export const ADD_TODO = 'ADD_TODO';
+export const DELETE_TODO = 'DELETE_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const TOGGLE_CASE ='TOGGLE_CASE';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
 export const VisibilityFilters = {
@@ -8,14 +10,18 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE',
 };
 
-export function addToDo(text){
-  return {type: ADD_TODO, text}
-}
+// export function addToDo(text){
+//   return {type: ADD_TODO, text}
+// }
 
-export function toggleToDo(index){
-  return {type: TOGGLE_TODO, index}
-}
+// export function deleteToDo(index){
+//   return {type: DELETE_TODO, index}
+// }
 
-export function setVisibilityFilter(filter){
-  return {type: SET_VISIBILITY_FILTER, filter}
-}
+// export function toggleToDo(index){
+//   return {type: TOGGLE_TODO, index}
+// }
+
+// export function setVisibilityFilter(filter){
+//   return {type: SET_VISIBILITY_FILTER, filter}
+// }
