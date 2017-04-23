@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ToDoItem = ({onClick, completed, text}) => (
+const ToDoItem = ({onClick, completed, text, onButtonClick}) => (
   <li>
     <span
       onClick={onClick}
@@ -11,7 +11,7 @@ const ToDoItem = ({onClick, completed, text}) => (
     >
     {text}
     </span>
-    <button>X</button>
+    <button onClick={onButtonClick}>X</button>
   </li>
 );
 

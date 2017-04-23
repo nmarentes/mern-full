@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({todos, onTodoClick}) => (
+const ToDoList = ({todos, onTodoClick, onDeleteClick}) => (
   <ul>
     {todos.map(todo =>
       <ToDoItem
         key={todo.id}
         {...todo}
         onClick={() => onTodoClick(todo.id)}
+        onButtonClick={() => onDeleteClick(todo.id)}
       />)}
   </ul>
 );
@@ -20,6 +21,7 @@ ToDoList.propTypes = {
     text: PropTypes.string.isRequired,
   }).isRequired).isRequired,
   onTodoClick: PropTypes.func.isRequired,
+  onDeleteClick: PropTypes.func.isRequired,
 };
 
 export default ToDoList;

@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {toggleToDo, deleteToDo} from '../actions';
 import ToDoList from '../components/ToDoList';
-
+// deleteToDo
 const getVisibleToDos = (todos, filter) => {
   switch (filter) {
     case 'SHOW_ALL':

@@ -22,4 +22,10 @@ export const toggleToDo = (id) => {
   }
 };
 
+export const deleteToDo = (id) => {
+  return {
+    type: 'DELETE_TODO',
+    id
+  }
+};
 
