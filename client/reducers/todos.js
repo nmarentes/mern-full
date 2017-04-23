@@ -1,4 +1,3 @@
-
 const todo = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -32,6 +31,8 @@ const todos = (state = [], action) => {
       return state.map(t =>
         todo(t, action)
       );
+    case 'DELETE_TODO':
+      return state.filter(t => t.id !== action.id);
     default:
       return state
   }
