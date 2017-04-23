@@ -14,6 +14,7 @@ const ToDoItem = ({onClick, completed, text, onButtonClick, onCaseButtonClick}) 
     &nbsp;
     <button onClick={onButtonClick}>X</button>
     <button onClick={onCaseButtonClick}>!</button>
+
   </li>
 );
 
