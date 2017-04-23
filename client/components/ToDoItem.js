@@ -18,6 +18,8 @@ const ToDoItem = ({onClick, completed, text, onButtonClick, onCaseButtonClick}) 
   </li>
 );
 
+// "!" button will toggle the case of the todo text
+
 ToDoItem.propTypes = {
   onClick: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,

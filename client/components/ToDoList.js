@@ -11,6 +11,7 @@ const ToDoList = ({todos, onTodoClick, onDeleteClick, onCaseButtonClick}) => (
         onClick={() => onTodoClick(todo.id)}
         onButtonClick={() => onDeleteClick(todo.id)}
         onCaseButtonClick={()=> onCaseButtonClick(todo.id)}
+
       />)}
   </ul>
 );
