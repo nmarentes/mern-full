@@ -1,3 +1,7 @@
+import {DELETE_TODO} from '../actions/Actions';
+
+console.log("Todo = " + DELETE_TODO);
+
 const todo = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_TODO':
