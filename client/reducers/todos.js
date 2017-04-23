@@ -1,4 +1,4 @@
-import {DELETE_TODO, ADD_TODO, TOGGLE_TODO} from '../actions/Actions';
+import {DELETE_TODO, ADD_TODO, TOGGLE_TODO, FLIP_TODO} from '../actions/Actions';
 
 const todo = (state = {}, action) => {
   switch (action.type) {
@@ -15,6 +15,18 @@ const todo = (state = {}, action) => {
 
       return Object.assign({}, state, {
         completed: !state.completed,
+      });
+    case FLIP_TODO:
+      if (state.id !== action.id) {
+        return state
+      }
+
+      const isUpperCase = state.text === state.text.toUpperCase();
+
+      console.log(`${state.text} is ${isUpperCase}`);
+
+      return Object.assign({}, state, {
+        text: isUpperCase? state.text.toLowerCase(): state.text.toUpperCase()
       });
 
     default:
@@ -35,6 +47,10 @@ const todos = (state = [], action) => {
       );
     case DELETE_TODO:
       return state.filter(t => t.id !== action.id);
+    case FLIP_TODO:
+      return state.map(t =>
+        todo(t, action)
+      );
     default:
       return state
   }
